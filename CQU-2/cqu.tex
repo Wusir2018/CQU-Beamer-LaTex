@@ -1,0 +1,106 @@
+\documentclass[UTF8]{beamer}
+\usepackage{ctex}
+\usepackage{fontspec}
+\usepackage{comment}
+\usepackage{xeCJK}
+\setCJKmainfont{KaiTi}
+\setCJKmonofont{KaiTi}
+\setCJKsansfont{Microsoft YaHei}
+\usefonttheme{professionalfonts}
+\usepackage{graphicx}
+\graphicspath{{fig/}} % storage figure in a sub-folder
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{bm}
+\usepackage{nkcolor}
+\usepackage{hyperref}
+\hypersetup{CJKbookmarks=true}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\theoremstyle{definition}
+%\newtheorem{theorem}{定理}
+%\newtheorem{definition}{定义}
+%\newtheorem{corollary}{推论}
+%\newtheorem{example}{例}
+\usepackage{booktabs} % for much better looking tables
+\usepackage{cite} % reference
+\usepackage{array} % for better arrays (eg matrices) in maths
+%\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+%\usepackage{threeparttable}
+\usepackage{cases} %equation set
+\usepackage{multirow} %use table
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+%\usepackage{capt-of}
+\setcounter{tocdepth}{1}%只显示section，不显示subsection
+\usepackage{listings}
+\lstset{tabsize=4, keepspaces=true,
+    xleftmargin=2em,xrightmargin=0em, aboveskip=1em,
+    backgroundcolor=\color{gray!20},  % 定义背景颜色
+    frame=none,                       % 表示不要边框
+    extendedchars=false,              % 解决代码跨页时，章节标题，页眉等汉字不显示的问题
+    numberstyle=\ttfamily,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue}\bfseries,
+    breakindent=10pt,
+    identifierstyle=,                 % nothing happens
+    commentstyle=\color{green}\small,  % 注释的设置
+    morecomment=[l][\color{green}]{\#},
+    numbers=left,stepnumber=1,numberstyle=\scriptsize,
+    showstringspaces=false,
+    showspaces=false,
+    flexiblecolumns=true,
+    breaklines=true, breakautoindent=true,breakindent=4em,
+    escapeinside={/*@}{@*/},
+}
+
+\title[重庆大学]{Beamer模板\\Style of ChongQing University}
+\author[吴昭]{吴昭\\(\url{lihua@163.com})}
+\institute{重庆大学}
+%\author[Calvin]{Calvin\inst{1} \and Cleven\inst{2}}
+%\institute[Univ]{\inst{1}南开大学 \and \inst{2}克莱登大学}
+\date{\today}
+
+
+\begin{document}
+%%%%%%%%%% 定理类环境的定义 %%%%%%%%%%
+%% 必须在导入中文环境之后
+
+\renewcommand{\contentsname}{目录}     % 将Contents改为目录
+\renewcommand{\abstractname}{摘要}     % 将Abstract改为摘要
+\renewcommand{\refname}{参考文献}      % 将References改为参考文献
+\renewcommand{\indexname}{索引}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\appendixname}{附录}
+%\renewcommand{\proofname}{证明}
+%\renewcommand{\algorithm}{算法}
+%----------------------------------------------------------------------
+% Title frame
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+%----------------------------------------------------------------------
+% Outline frame
+
+\begin{frame}
+\frametitle{目录}
+\tableofcontents
+\end{frame}
+
+
+\include{part/ch01}
+\include{part/ch02}
+\include{part/ch03}
+\include{part/ch04}
+
+
+\end{document}
+

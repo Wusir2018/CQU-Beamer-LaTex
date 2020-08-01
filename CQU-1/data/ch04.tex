@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section[用相对论时空观修正的物理学]{用相对论时空观修正的物理学}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 章首目录页 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}%<beamer>
+    \frametitle{\textsc{Contents}} \vspace{-1.05cm}\label{sec:4}
+    \begin{multicols}{2}
+    \begin{minipage}[t]{0.55\textwidth}
+    \tableofcontents[currentsection,hideallsubsections]
+    % [currentsection,hideallsubsections][sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+    \end{minipage}
+
+    \begin{minipage}[t]{0.55\textwidth}
+    \vspace{1.0cm}
+    \begin{spacing}{1.05} % 调整间距 需要\usepackage{setspace}
+    \begin{itemize}
+        \item\hyperlink{subsec:4-1}{相对论力学: 从四维协变量到质能等价}
+        \item\hyperlink{subsec:4-2}{电磁学天生相对论协变}
+      %  \item\hyperlink{subsec:4-3}{Power Theorem}
+       % \item\hyperlink{subsec:4-4}{Radiation Intensity}
+       % \item\hyperlink{subsec:4-5}{Examples of Power Patterns}
+       % \item\hyperlink{subsec:4-6}{Field Patterns}
+       % \item\hyperlink{subsec:4-7}{Phase Patterns}
+    \end{itemize}
+    \end{spacing}
+    \end{minipage}
+    \end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[相对论力学: 从四维协变量到质能等价]{mass-energy equivalence}\label{subsec:4-1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{四维速度矢量}}
+\begin{itemize}
+\hilite<1>\item 除了坐标四维矢量外, 最简单的是速度四维矢量 后者定义为
+\begin{align}
+V^\mu:=\frac{dx^\mu}{d\tau}=\gamma\frac{dx^\mu}{dt}=\gamma(c,\bm{V}).\pause
+\end{align}
+\hilite<2>\item 为什么这样做? 验证: 两个矢量合成一个标量:
+\begin{align}
+V^\mu V_\mu=\gamma^2c^2-\gamma^2 V^2=c^2.\nonumber
+\end{align}
+
+\end{itemize}
+%\rightline{\hyperlink{sec:4}{\beamerreturnbutton{back}} }
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{\textsc{四维动量矢量}}
+\begin{itemize}
+
+\hilite<1>\item 于是, 动量四维矢量我们定义如下
+\begin{align}
+p^\mu:=&m_0V^\mu=(\gamma m_0c,\gamma m_0\bm{V})\nonumber\\
+=&(\frac{\gamma m_0c^2}{c},\bm{p})=(\frac{E}{c},\bm{p});\pause
+\end{align}
+\hilite<2>\item 上式中取 $E=\gamma m_0c^2$ 的原因, 是作泰勒展开可以发现~$\gamma m_0c^2=m_0c^2+\frac{1}{2}m_0v^2+\cdots$.
+
+
+
+
+\end{itemize}
+%\rightline{\hyperlink{sec:4}{\beamerreturnbutton{back}} }
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}
+\frametitle{\textsc{伟大的质能等价现身}}
+\begin{itemize}
+
+\hilite<1>\item 于是我们发现, 当物体静止时, 仍有
+\begin{align}
+E_0=m_0c^2
+\end{align}
+的能量, 这称为质能等价;\pause
+
+\hilite<2>\item 而~$\frac{E^2}{c^2}-\bm{p}^2=m_0^2c^2$, 即
+\begin{align}
+E^2=\bm{p}^2c^2+m_0^2c^4,\nonumber
+\end{align}
+称为能动关系.
+
+\end{itemize}
+%\rightline{\hyperlink{sec:4}{\beamerreturnbutton{back}} }
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[电磁学天生相对论协变]{电磁学天生相对论协变}\label{subsec:4-2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{麦克斯韦方程的洛伦兹协变形式}}
+\begin{itemize}
+\hilite<1>\item 问: 电磁学规律, 即麦克斯韦方程, 是否洛伦兹协变?\pause
+\hilite<2>\item 麦克斯韦方程可写为
+\begin{gather}
+\partial_\mu F^{\mu\nu}=\mu_0J^\nu,\\
+\partial_\mu F_{\nu\rho}+\partial_\nu F_{\rho\mu}+\partial_\rho F_{\mu\nu}=0;
+\end{gather}
+即电磁学规律天生是四维协变的.
+
+\end{itemize}
+%\rightline{\hyperlink{sec:4}{\beamerreturnbutton{back}} }
+\end{frame}
+
+\begin{frame}
+\frametitle{\textsc{麦克斯韦方程的洛伦兹协变形式}}
+\begin{itemize}
+\hilite<1>\item 万有引力如何?\pause
+\hilite<2>\item Welcome to the lessons of 童校长!
+
+\end{itemize}
+%\rightline{\hyperlink{sec:4}{\beamerreturnbutton{back}} }
+\end{frame}
+
+
+

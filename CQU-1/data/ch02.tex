@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section[相对论时空观的集中反映: 洛伦兹变换]{Lorentz transformation} %[误差校正基础]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 章首目录页 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}%<beamer>
+    \frametitle{\textsc{Contents}} \vspace{-0.85cm}\label{sec:2}
+    \begin{multicols}{2}
+    \begin{minipage}[t]{0.55\textwidth}
+    \tableofcontents[currentsection,hideallsubsections]
+    % [currentsection,hideallsubsections][sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+    \end{minipage}
+
+    \begin{minipage}[t]{0.55\textwidth}
+    \vspace{0.5cm}
+    \begin{spacing}{0.9} % 调整间距 需要\usepackage{setspace}
+    \begin{itemize}
+        \item\hyperlink{subsec:2-1}{光速不变性导致间隔不变性}
+        \item\hyperlink{subsec:2-2}{由间隔不变, 导出洛伦兹变换}
+       % \item\hyperlink{subsec:2-3}{动尺收缩, 动~``程'' 延缓}
+       % \item\hyperlink{subsec:2-4}{Directivity and Gain}
+        %\item\hyperlink{subsec:2-5}{Antenna Apertures}
+        %\item\hyperlink{subsec:2-6}{Radio Communication Link}
+        %\item\hyperlink{subsec:2-7}{Fields From Dipole}
+        %\item\hyperlink{subsec:2-8}{Antenna Field Zones}
+        %\item\hyperlink{subsec:2-9}{Shape-Impedance Considerations}
+        %\item\hyperlink{subsec:2-10}{Polarization}
+    \end{itemize}
+    \end{spacing}
+    \end{minipage}
+    \end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[光速不变性导致间隔不变性]{间隔不变性}\label{subsec:2-1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{事件, 由光信号联系着的事件}}% \transblindshorizontal % 水平出现效果
+
+\begin{itemize}
+\hilite<1>\item 事件~$(ct,x,y,z)$. 两个由光联系着的事件, 在~$\Sigma$ 与~$\Sigma'$ 中分别有
+\begin{align}
+c^2t^2-x^2-y^2-z^2=0=c^2t'^2-x'^2-y'^2-z'^2.\pause
+\end{align}
+
+\hilite<2>\item 一般情况下, $c^2t^2-x^2-y^2-z^2\neq0$, then what is the relationship between them?
+\pause
+
+\hilite<3>\item So we still have
+\begin{align}
+c^2t^2-x^2-y^2-z^2=c^2t'^2-x'^2-y'^2-z'^2.\nonumber\\\nonumber
+\end{align}
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{某个空间下最重要的不变性/标量: 间隔}}
+
+
+\begin{itemize}
+
+\hilite<1>\item 因为~$c^2t^2-x^2-y^2-z^2$ 这个量的特殊性、重要性, 我们将它起个名字, 叫间隔, 记为
+\begin{align}
+ds^2=c^2dt^2-dx^2-dy^2-dz^2.\pause
+\end{align}
+
+\hilite<2>\item 逆变矢量~$x^\mu=(ct,x,y,z)$,
+
+协变矢量~$x_\mu=(ct,-x,-y,-z)$,
+\pause
+
+\hilite<3>\item 所以我们可得
+\begin{align}
+ds^2=dx^\mu dx_\mu.\nonumber
+\end{align}
+\end{itemize}
+
+
+
+
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{\textsc{不同时空具有不同的度规}}
+
+\begin{itemize}
+
+\hilite<1>\item 我们引入以下二阶对称张量
+\begin{align}
+g_{\mu\nu}=\left[
+\begin{array}{cccc}
+1&0&0&0\\
+0&-1&0&0\\
+0&0&-1&0\\
+0&0&0&-1
+\end{array}
+\right],
+\end{align}
+称为度规,\pause
+
+\hilite<2>\item 就可将间隔进一步表为
+\begin{align}
+ds^2=g_{\mu\nu}dx^\mu dx^\nu.\nonumber\pause
+\end{align}
+
+
+\hilite<3>\item 度规在广义相对论中, 具有更重要的作用.
+\end{itemize}
+
+
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[由间隔不变, 导出洛伦兹变换]{由间隔不变导出洛伦兹变换}\label{subsec:2-2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{事件变换的一般关系}}
+
+\begin{itemize}
+
+\hilite<1>\item 简单分析, 不难得知, 两个惯性坐标系中看同一个事件的坐标关系为
+\begin{align}
+ct'=&act+bx,\\
+x'=&Act+Bx,\\
+y'=&y,\\
+z'=&z.\pause
+\end{align}
+
+
+\hilite<2>\item 利用间隔不变性~$c^2t'^2-x'^2=c^2t^2-x^2$, 即有
+\begin{align}
+\left.\begin{array}{c}
+a^2-A^2=1\\
+b^2-B^2=-1\\
+ab-AB=0
+\end{array}
+\right\}\Rightarrow
+\left\{\begin{array}{c}
+a=B,A=b,\\
+a^2-b^2=1.
+\end{array}\right.\nonumber
+\end{align}
+\end{itemize}
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{洛伦兹变换}}
+\begin{itemize}
+
+\hilite<1>\item 由前述结果, 可将变换进一步整理作
+\begin{align}
+ct'=&act+bx,\\
+x'=&bct+ax;
+\end{align}
+注意其中~$a^2-b^2=1$.\pause
+
+\hilite<2>\item $\Sigma'$ 中看自己原点的坐标恒为~$0$, $\Sigma$ 中看它是~$-vt$, 于是我们有
+\begin{align}
+0=bct-avt;
+\end{align}
+即
+\begin{align}
+\frac{b}{a}=\frac{v}{c}:=\beta.\nonumber
+\end{align}
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{洛伦兹变换}}
+\begin{itemize}
+
+\hilite<1>\item 由前述结果, 我们最终解得
+\begin{align}
+a=&\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}:=\gamma,\\
+b=&\frac{v/c}{\sqrt{1-\frac{v^2}{c^2}}}=\beta\gamma.
+\end{align}
+
+\end{itemize}
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\textsc{洛伦兹变换}}
+\begin{itemize}
+
+
+\hilite<1>\item So at last, we get the final form of the Lorentz transformation:
+\begin{equation}
+\left\{
+\begin{aligned}
+ct'&=\frac{ct+\frac{v}{c}x}{\sqrt{1-\frac{v^2}{c^2}}},\\
+x'&=\frac{vt+x}{\sqrt{1-\frac{v^2}{c^2}}},\\
+y'&=y,\\
+z'&=z;\pause
+\end{aligned}
+\right.
+\end{equation}
+
+\hilite<2>\item Lorentz boost.%上述变换即同一事件在不同惯性系中的变换式, 亦称为洛伦兹变换在~$x$ 方向上的~boost.
+
+
+
+
+\end{itemize}
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{\textsc{洛伦兹变换}}
+\begin{itemize}
+
+
+\hilite<1>\item 我们还可将上述变换用矩阵形式表为
+\begin{align}
+\left[
+\begin{array}{l}
+ct'\\x'\\y'\\z'
+\end{array}
+\right]=
+\left[
+\begin{array}{cccc}
+\gamma&\beta\gamma&0&0\\
+\beta\gamma&\gamma&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right];
+\end{align}
+\end{itemize}
+
+%\rightline{\hyperlink{sec:2}{\beamerreturnbutton{back}} }
+\end{frame}
+

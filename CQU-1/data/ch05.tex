@@ -1,0 +1,245 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section[狭义相对论与量子场论简介]{狭义相对论与量子场论简介}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 章首目录页 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}%<beamer>
+    \frametitle{\textsc{Contents}} \vspace{-0.85cm}\label{sec:5}
+    \begin{multicols}{2}
+    \begin{minipage}[t]{0.55\textwidth}
+    \tableofcontents[currentsection,hideallsubsections]
+    % [currentsection,hideallsubsections][sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+    \end{minipage}
+
+    \begin{minipage}[t]{0.55\textwidth}
+    \vspace{1.1cm}
+    \begin{spacing}{1.05} % 调整间距 需要\usepackage{setspace}
+    \begin{itemize}
+        \item\hyperlink{subsec:5-1}{能动关系: 量子化的出发点}
+        \item\hyperlink{subsec:5-2}{自旋与场的关系}
+        %\item\hyperlink{subsec:5-3}{Array of Similar Sources}
+        %\item\hyperlink{subsec:5-4}{Array Pattern Synthesis}
+        %\item\hyperlink{subsec:5-5}{Array of Dissimilar Sources}
+        %\item\hyperlink{subsec:5-6}{Linear Array of n Isotropic Point Sources}
+        %\item\hyperlink{subsec:5-7}{Null Direction for Arrays}
+    \end{itemize}
+    \end{spacing}
+    \end{minipage}
+    \end{multicols}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[量子化的出发点]{量子化的出发点}\label{subsec:5-1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{\textsc{非相对论量子力学}}
+\begin{itemize}
+\hilite<1>\item 一般所谓的量子力学, 指的是非相对论量子力学. How to get the Schrodinger's equation?\pause
+\hilite<2>\item 替换原则: 在经典能动关系~$T+V=E$ 中作代换~$\bm{p}\rightarrow -i\hbar\nabla,~E\rightarrow i\hbar\frac{\partial}{\partial t}$, 并作用在波函数上, 就得
+\begin{align}
+\left(-\frac{\hbar^2}{2m}\nabla^2+V\right)\psi(\bm{r},t)=i\hbar\frac{\partial}{\partial t}\psi(\bm{r},t)
+\end{align}
+此即薛定谔方程.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\textsc{相对论量子力学}}
+\begin{itemize}
+\hilite<1>\item 相对论能动关系, 我们再次写出为
+\begin{align}
+p^2=p^\mu p_\mu=m^2c^2, or~p^2-m^2=0.\pause
+\end{align}
+
+\hilite<2>\item 仍按之前的替换原则, 或现在紧凑地写为~$p^\mu=i\partial^\mu,~p_\mu=i\partial_\mu$, 并作用在波函数上, 就得
+\begin{align}
+(\partial^2+m^2)\phi=0.
+\end{align}
+此即~Klein-Gordon 方程.
+\end{itemize}
+%\rightline{\hyperlink{sec:5}{\beamerreturnbutton{back}} }
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[自旋与场的关系: 群表示论]{自旋与场的关系: 群表示论}\label{subsec:5-2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{\textsc{自旋与场的关系: 群表示论}}
+\begin{itemize}
+\hilite<1>\item 双曲三角函数有
+\begin{gather}
+\cosh x=\frac{e^x+e^{-x}}{2},~\sinh=\frac{e^x-e^{-x}}{2};\nonumber\\
+\cosh^2x-\sinh^2x=1;\pause
+\end{gather}
+
+\hilite<2>\item 而我们恰有~$\gamma^2-(\beta\gamma)^2=1$, 所以若我们令
+\begin{align}
+\gamma=\cosh\zeta,~\beta\gamma=\sinh\zeta,\nonumber
+\end{align}
+就可得
+
+
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\textsc{自旋与场的关系: 群表示论}}
+
+\begin{align}
+\left[
+\begin{array}{l}
+ct'\\x'\\y'\\z'
+\end{array}
+\right]&=
+\left[
+\begin{array}{cccc}
+\cosh\zeta&\sinh\zeta&0&0\\
+\sinh\zeta&\cosh\zeta&0&0\\
+0&0&1&0\\
+0&0&0&1
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right]\nonumber\\
+&=\exp\left[
+\begin{array}{cccc}
+0&\zeta&0&0\\
+\zeta&0&0&0\\
+0&0&0&0\\
+0&0&0&0
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right].\nonumber
+\end{align}
+
+
+%\rightline{\hyperlink{sec:5}{\beamerreturnbutton{back}} }
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{\textsc{自旋与场的关系: 群表示论}}
+
+于是一个一般的洛伦兹~boost 就是
+\begin{align}
+\left[
+\begin{array}{l}
+ct'\\x'\\y'\\z'
+\end{array}
+\right]
+=\exp\left[
+\begin{array}{cccc}
+0&\zeta_x&\zeta_y&\zeta_z\\
+\zeta_x&0&0&0\\
+\zeta_y&0&0&0\\
+\zeta_z&0&0&0
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right].
+\end{align}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\textsc{自旋与场的关系: 群表示论}}
+
+洛伦兹变换的连续变换, 有六个, 三个~boost, 以及三个旋转; 后者以绕~$Z$ 轴正方向的旋转为例, 为:
+\begin{align}
+\left[
+\begin{array}{l}
+ct'\\x'\\y'\\z'
+\end{array}
+\right]=&
+\left[
+\begin{array}{cccc}
+1&0&0&0\\
+0&\cos\theta&\sin\theta&0\\
+0&-\sin\theta&\cos\theta&0\\
+0&0&0&1
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right]\nonumber\\
+=&\exp\left[
+\begin{array}{cccc}
+0&0&0&0\\
+0&0&\theta&0\\
+0&-\theta&0&0\\
+0&0&0&0
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right].\nonumber
+\end{align}
+\end{frame}
+
+\begin{frame}
+\frametitle{\textsc{自旋与场的关系: 群表示论}}
+所以全部六个洛伦兹变换就可写为:
+\begin{align}
+\left[
+\begin{array}{l}
+ct'\\x'\\y'\\z'
+\end{array}
+\right]
+=\exp\left[
+\begin{array}{cccc}
+0&\zeta_x&\zeta_y&\zeta_z\\
+\zeta_x&0&\theta_z&-\theta_y\\
+\zeta_y&-\theta_z&0&\theta_x\\
+\zeta_z&\theta_y&-\theta_x&0
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+ct\\x\\y\\z
+\end{array}
+\right];
+\end{align}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\textsc{自旋与场的关系: 群表示论}}
+\begin{itemize}
+\hilite<1>\item 洛伦兹变换的含义? 对矢量的变换作用\pause
+\hilite<2>\item 群表示得出自旋与场的关系: 洛伦兹变换对其它量的变换\pause
+\hilite<3>\item 狄拉克方程的严格导出.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{\textsc{末片}}
+\begin{itemize}
+\hilite<1>\item 感谢大家!\pause
+\hilite<2>\item 你是你的大学, 与万门一起进步!
+
+\end{itemize}
+\end{frame}
