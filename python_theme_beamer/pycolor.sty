@@ -1,6 +1,5 @@
 %--------------------------------------------------------
-% NOTE: 1) This is an UNOFFICIAL LaTeX beamer style for 
-%           Nankai University.
+% NOTE: 1) This is an UNOFFICIAL LaTeX beamer style about Python.
 %       2) This is not exactly a beamer style, rather
 %           it contains two LaTeX files to be inserted 
 %           in the slides' source file.
@@ -31,7 +30,7 @@
 %--------------------------------------------------------
 %\usepackage{winfonts}
 %\usepackage[T1]{fontenc}
-\renewcommand{\sfdefault}{cmr}
+%\renewcommand{\sfdefault}{cmr}
 %--------------------------------------------------------
 
 %--------------------------------------------------------
@@ -86,10 +85,8 @@
 \setbeamertemplate{blocks}[rounded][shadow=true]
 
 % Background
-\pgfdeclareimage[width=\paperwidth,height=0.95\paperheight]{bg}{cqubackground.png}
+\pgfdeclareimage[width=\paperwidth,height=0.95\paperheight]{bg}{pybg.png}
 \setbeamertemplate{background}{\pgfuseimage{bg}}
-
-\hypersetup{pdfpagemode={FullScreen}} % 默认全屏播放
 
 %--------------------------------------------------------
 % Set up some lengths
@@ -133,10 +130,10 @@
 \setlength{\footerheight}{0.09017\paperheight}
 
 \setlength{\titlepageheaderheight}{0.1761\paperheight}
-\setlength{\titlepagefooterheight}{0.1759\paperheight}
-\setlength{\titlepagemaintitleblockheight}{0.1761\paperheight}
+\setlength{\titlepagefooterheight}{0.2759\paperheight}
+\setlength{\titlepagemaintitleblockheight}{0.2361\paperheight}
 \setlength{\titlepagesubtitleblockheight}{0.1\paperheight}
-\setlength{\titlepagenamedateblockheight}{0.2961\paperheight}
+\setlength{\titlepagenamedateblockheight}{0.3161\paperheight}
 %\setlength{\titlepageinstitutionheight}{0.95cm}
 
 \setlength{\titlepagespaceundername}{16pt}
@@ -150,17 +147,18 @@
 %--------------------------------------------------------
 
 % Define colour names
-%\definecolor{nkpurple}{rgb}{0.44140 0.10156 0.37109} %#(113,26,95)
-\definecolor{nkpurple}{rgb}{0.0078 0.32031 0.62109} %#(2,82,159)   %%%定义模板颜色为蓝色
-\setbeamercolor{nktitle}{bg=white,fg=nkpurple}
-
+\definecolor{pyblue}{rgb}{0.2392 0.4784 0.6705} %#(61,122,171)
+\definecolor{pyyellow}{rgb}{1 0.8980 0.4157} %#(255,229,106)
+%\setbeamercolor{nktitle}{bg=white,fg=pyblue}
+%\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
 % Set element colours
-\setbeamercolor{title}{bg=white, fg=nkpurple}
-\setbeamercolor{subtitle}{bg=white, fg=nkpurple}
+\setbeamercolor{title}{bg=pyyellow, fg=pyblue}
+\setbeamercolor{subtitle}{bg=white, fg=pyblue}
 \setbeamercolor{titlepageheader}{bg=white,fg=black}
 \setbeamercolor{titlepagefooter}{bg=white,fg=black}
-\setbeamercolor{block title}{bg=white, fg=nkpurple}
-\setbeamercolor{structure}{bg=white, fg=nkpurple}
+\setbeamercolor{block title}{fg=white,bg=pyblue}
+\setbeamercolor{block body}{fg=black,bg=pyblue!10!white}
+\setbeamercolor{structure}{bg=white, fg=pyblue}
 % \setbeamercolor{alerted text}{fg=darkOrange}
 
 %--------------------------------------------------------
@@ -171,7 +169,7 @@
 \setbeamerfont{author}{size=\normalsize}
 \setbeamerfont{date}{size=\scriptsize}
 \setbeamerfont{subtitle}{size=\footnotesize,series=\bfseries}
-\setbeamerfont{block title}{size=\normalsize,series=\bfseries}
+\setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{structure}{size=\normalsize,series=\bfseries}
 
 \setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
@@ -184,20 +182,17 @@
 \setbeamertemplate{title page}
 {%
 \begin{beamercolorbox}[sep=0cm,right,wd=\paperwidth,ht=\titlepageheaderheight,rightskip=\headingleftmargin]{titlepageheader}
-\includegraphics[width=0.3420\paperwidth]{cqu_logo.png}
+\includegraphics[width=0.2720\paperwidth]{python-logo.png}
 \vskip0.0361\titlepageheaderheight
 \end{beamercolorbox}
-\begin{beamercolorbox}[center,wd=\paperwidth,ht=\titlepagemaintitleblockheight]{nktitle}
-  \usebeamerfont{title}\inserttitle
-\end{beamercolorbox}%
-\nointerlineskip%
-\vskip-1pt%
-\begin{beamercolorbox}[center,wd=\paperwidth,ht=\titlepagesubtitleblockheight]{white}
-%\tikz{\node[inner sep=0cm, text width=\paperwidth, minimum height=\titlepagesubtitleblockheight]{
-  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle
-\end{beamercolorbox}%
-\nointerlineskip%
-\vskip-1pt%
+\begin{beamercolorbox}[center,wd=0.95\paperwidth,ht=\titlepagemaintitleblockheight,rounded=true,shadow=true]{title}
+  \usebeamerfont{title}\inserttitle\\
+  \vskip\titlepagespaceunderdate%
+  \usebeamerfont{subtitle}\insertsubtitle
+  \vskip\titlepagespaceunderdate%
+\end{beamercolorbox}
+%\nointerlineskip%
+%\vskip-1pt%
 \begin{beamercolorbox}[center,wd=\paperwidth,ht=\titlepagenamedateblockheight]{white}
       \usebeamerfont{author}\insertauthor\\
       \vskip\titlepagespaceunderdate%
@@ -206,9 +201,24 @@
       \usebeamerfont{date}\insertdate
       \vskip\titlepagespaceunderdate%
 \end{beamercolorbox}%
-%\begin{beamercolorbox}[center,wd=\paperwidth,ht=\titlepagefooterheight]{titlepagefooter}
-%\end{beamercolorbox}
+\begin{beamercolorbox}[center,wd=\paperwidth,ht=\titlepagefooterheight]{titlepagefooter}
+\end{beamercolorbox}
 }
+
+\begin{comment}
+\begin{beamercolorbox}[center,wd=0.92\paperwidth,ht=\titlepagemaintitleblockheight,rounded=true,shadow=true]{title}
+  \usebeamerfont{title}\inserttitle\\
+  \vskip\titlepagespaceunderdate%
+  \usebeamerfont{subtitle}\insertsubtitle
+  \vskip\titlepagespaceunderdate%
+\end{beamercolorbox}%
+\nointerlineskip%
+\vskip-1pt%
+\begin{beamercolorbox}[center,wd=\paperwidth,ht=\titlepagesubtitleblockheight]{white}
+%\tikz{\node[inner sep=0cm, text width=\paperwidth, minimum height=\titlepagesubtitleblockheight]{
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle
+\end{beamercolorbox}%
+\end{comment}
 
 \begin{comment}
 % Footline: AUTHOR | TITLE | DATE FRAMENUMBER
@@ -275,4 +285,4 @@
 %    \hbox to\textwidth{\hskip-\Gm@lmargin\pgfuseshading{beamer@topshade}\hskip-\Gm@rmargin}
 %    \vskip-2pt
 }
-\setbeamercolor{frametitle}{bg=white,fg=nkpurple}
+\setbeamercolor{frametitle}{bg=pyyellow,fg=pyblue}
