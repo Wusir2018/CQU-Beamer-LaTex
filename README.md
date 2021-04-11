@@ -5,8 +5,6 @@
 
 根据万门大学项海波Beamer模板改编
 
-根据南开大学李华Beamer模板改编[[link](https://github.com/latexstudio/Beamer-Style-of-NKU)] [[link](https://github.com/zshicode/LaTeX-Beamer-Nankai)]
-
 
 
 ## 推荐
